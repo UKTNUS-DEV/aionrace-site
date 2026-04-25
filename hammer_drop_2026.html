@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hammer Drop MTB Race Series 2026 | MOAB Bicycle Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700;800&family=Nunito+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --mag:#C0146A;--red:#C93A1A;--org:#E86E10;--gld:#c89000;
+  --bg:#f4f3f1;--white:#ffffff;--text:#1a1a1a;--muted:#6a6a6a;
+  --border:rgba(0,0,0,0.1);--border-light:rgba(0,0,0,0.07);
+  --radius:14px;--radius-sm:9px;
+}
+body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:1.5rem 1rem 4rem}
+.hub{max-width:900px;margin:0 auto}
+
+/* HERO */
+.hero{border-radius:var(--radius);overflow:hidden;position:relative;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;margin-bottom:1rem}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-ov{position:absolute;inset:0;background:#1A0A04;opacity:0.48}
+.hero-ov2{position:absolute;inset:0;background:linear-gradient(to top,#1A0A04 0%,rgba(26,10,4,0.25) 45%,transparent 70%)}
+.hero-content{position:relative;z-index:3;padding:2rem 2.25rem 2.25rem}
+.hero-eyebrow{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.4rem}
+.hero-title{font-family:'Exo 2',sans-serif;font-weight:800;font-size:clamp(48px,7.5vw,80px);line-height:0.92;color:#fff;margin-bottom:0.15rem;letter-spacing:-1px}
+.hero-title .sub{font-family:'Exo 2',sans-serif;font-weight:600;font-size:clamp(22px,3.5vw,34px);color:#E86E10;display:block;line-height:1.1;margin-top:0.2rem;letter-spacing:-0.3px}
+.hero-venues{display:flex;flex-direction:column;gap:7px;margin:1rem 0 1.15rem}
+.venue-row{display:flex;align-items:center;gap:10px}
+.venue-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.venue-dot.mag{background:#C0146A}
+.venue-dot.red{background:#C93A1A}
+.venue-dot.org{background:#E86E10}
+.venue-text{font-family:'Nunito Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.88);font-weight:600}
+.venue-tag{font-size:12px;font-weight:300;color:rgba(255,255,255,0.5);margin-left:4px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px}
+.hp{border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;font-family:'Nunito Sans',sans-serif;letter-spacing:0.2px}
+.hp-bikereg{background:#E86E10;color:#fff}
+.hp-aion{background:#C0146A;color:#fff}
+.hp-plain{background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.28);color:#fff}
+
+/* DATES */
+.dates-band{background:#C0146A;border-radius:var(--radius-sm);padding:0.9rem 1rem;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-bottom:1rem}
+.db-cell{text-align:center}
+.db-day{font-family:'Exo 2',sans-serif;font-size:28px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.5px}
+.db-month{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.65)}
+
+/* STATS */
+.stat-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:1rem}
+.stat-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1rem;text-align:center;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.sn{font-family:'Exo 2',sans-serif;font-size:36px;font-weight:800;line-height:1;letter-spacing:-0.5px}
+.sn.mag{color:#C0146A}.sn.red{color:#C93A1A}.sn.org{color:#E86E10}.sn.gld{color:#c89000}
+.slbl{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px}
+
+/* SECTION HEADERS */
+.sh{display:flex;align-items:center;gap:12px;margin-bottom:0.9rem}
+.sh-line{flex:1;height:2px;border-radius:2px}
+.sh-text{font-family:'Exo 2',sans-serif;font-size:18px;font-weight:800;letter-spacing:-0.3px;text-transform:uppercase;white-space:nowrap}
+.sh.mag .sh-line{background:#C0146A}.sh.mag .sh-text{color:#C0146A}
+.sh.red .sh-line{background:#C93A1A}.sh.red .sh-text{color:#C93A1A}
+.sh.org .sh-line{background:#E86E10}.sh.org .sh-text{color:#E86E10}
+.sh.gld .sh-line{background:#c89000}.sh.gld .sh-text{color:#c89000}
+.sh.wah .sh-line{background:#D91B1B}.sh.wah .sh-text{color:#D91B1B}
+.sh.teal .sh-line{background:#0F6E56}.sh.teal .sh-text{color:#0F6E56}
+
+/* EVENTS */
+.events-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1rem}
+.ev{border-radius:var(--radius);padding:1.2rem;border-left:4px solid transparent;background:var(--white);box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.ev.sht{border-color:#C0146A}
+.ev.hor{border-color:#C93A1A}
+.ev.bar{border-color:#E86E10}
+.ev-tag{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:0.55rem}
+.ev.sht .ev-tag{background:#C0146A;color:#fff}
+.ev.hor .ev-tag{background:#C93A1A;color:#fff}
+.ev.bar .ev-tag{background:#E86E10;color:#fff}
+.ev-name{font-family:'Exo 2',sans-serif;font-size:21px;font-weight:800;line-height:1;margin-bottom:0.25rem;letter-spacing:-0.3px}
+.ev.sht .ev-name{color:#7a0040}.ev.hor .ev-name{color:#7a1f00}.ev.bar .ev-name{color:#8a3800}
+.ev-loc{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:600;color:var(--muted);margin-bottom:0.55rem}
+.ev-mult{font-family:'Exo 2',sans-serif;font-size:34px;font-weight:800;line-height:1;letter-spacing:-0.5px}
+.ev.sht .ev-mult{color:#C0146A}.ev.hor .ev-mult{color:#C93A1A}.ev.bar .ev-mult{color:#E86E10}
+.ev-mult-lbl{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-weight:600;margin-top:2px}
+.ev-detail{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);line-height:1.55;margin-top:0.45rem;font-weight:400}
+
+/* HOW IT WORKS */
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
+.how-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.3rem;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.how-num{font-family:'Exo 2',sans-serif;font-size:36px;font-weight:800;line-height:1;color:#C0146A;margin-bottom:0.3rem;letter-spacing:-1px}
+.how-title{font-family:'Nunito Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:0.4rem}
+.how-body{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);line-height:1.65;font-weight:400}
+.rd-note{background:#FDF0F5;border:1px solid rgba(192,20,106,0.2);border-radius:var(--radius-sm);padding:0.65rem 0.9rem;margin-top:0.65rem;font-family:'Nunito Sans',sans-serif;font-size:11px;color:#7a0040;font-weight:600;line-height:1.5}
+
+/* FORMATS */
+.format-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
+.fmt{border-radius:var(--radius);padding:1.3rem;border:2px solid}
+.fmt.f20{background:#FDF0F5;border-color:#C0146A}
+.fmt.f30{background:#FFF4EE;border-color:#C93A1A}
+.fmt-head{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem}
+.fmt-dur{font-family:'Exo 2',sans-serif;font-weight:800;font-size:44px;line-height:1;letter-spacing:-1px}
+.fmt.f20 .fmt-dur{color:#7a0040}.fmt.f30 .fmt-dur{color:#7a1f00}
+.fmt-dur span{font-size:20px;font-weight:600;letter-spacing:0}
+.fmt-badge{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 11px;border-radius:100px;margin-top:6px}
+.fmt.f20 .fmt-badge{background:#C0146A;color:#fff}.fmt.f30 .fmt-badge{background:#C93A1A;color:#fff}
+.fmt-who{font-family:'Nunito Sans',sans-serif;font-size:13px;font-weight:700;margin-bottom:0.5rem}
+.fmt.f20 .fmt-who{color:#8a0048}.fmt.f30 .fmt-who{color:#8a2200}
+.fmt-body{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);line-height:1.65;font-weight:400}
+.npe-note{margin-top:0.65rem;padding:0.55rem 0.8rem;border-radius:var(--radius-sm);font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:600;line-height:1.5}
+.fmt.f20 .npe-note{background:rgba(192,20,106,0.08);color:#8a0048;border:1px solid rgba(192,20,106,0.2)}
+.fmt.f30 .npe-note{background:rgba(201,58,26,0.08);color:#7a1f00;border:1px solid rgba(201,58,26,0.2)}
+
+/* PODIUM */
+.podium-hero{background:#C0146A;border-radius:var(--radius);padding:1.75rem 2rem;margin-bottom:1rem;position:relative;overflow:hidden}
+.podium-hero::after{content:'PODIUM';position:absolute;right:-8px;top:50%;transform:translateY(-50%);font-family:'Exo 2',sans-serif;font-size:100px;font-weight:800;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;letter-spacing:-3px}
+.ph-eyebrow{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-bottom:0.4rem}
+.ph-title{font-family:'Exo 2',sans-serif;font-size:40px;font-weight:800;color:#fff;line-height:0.95;margin-bottom:0.55rem;letter-spacing:-1px}
+.ph-title span{color:#FFD97D}
+.ph-body{font-family:'Nunito Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.8);line-height:1.65;max-width:520px;font-weight:400}
+.ph-note{margin-top:0.9rem;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);border-radius:100px;padding:5px 15px;font-family:'Nunito Sans',sans-serif;font-size:12px;color:#fff;font-weight:600}
+
+.podium-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
+.pd-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.pd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.pd-card.men20::before{background:#C0146A}
+.pd-card.wom20::before{background:#C93A1A}
+.pd-card.men30::before{background:#E86E10}
+.pd-card.wom30::before{background:#c89000}
+.pd-race-tag{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:0.65rem}
+.men20 .pd-race-tag{background:#FDF0F5;color:#7a0040}
+.wom20 .pd-race-tag{background:#FFF4EE;color:#7a1f00}
+.men30 .pd-race-tag{background:#FFF8EE;color:#8a3800}
+.wom30 .pd-race-tag{background:#FAEEDA;color:#7a5a00}
+.pd-title{font-family:'Exo 2',sans-serif;font-size:21px;font-weight:800;line-height:1;margin-bottom:0.8rem;letter-spacing:-0.3px}
+.men20 .pd-title{color:#C0146A}.wom20 .pd-title{color:#C93A1A}.men30 .pd-title{color:#E86E10}.wom30 .pd-title{color:#c89000}
+.pd-places{display:flex;gap:8px}
+.pd-place{flex:1;text-align:center;padding:0.7rem 0.25rem;border-radius:var(--radius-sm);background:#f6f5f3}
+.pd-place-label{font-family:'Exo 2',sans-serif;font-size:20px;font-weight:800;line-height:1;letter-spacing:-0.3px}
+.pd-place-label.g{color:#c89000}.pd-place-label.s{color:#888780}.pd-place-label.br{color:#854F0B}
+.pd-place-sub{font-family:'Nunito Sans',sans-serif;font-size:10px;color:var(--muted);font-weight:600;margin-top:3px}
+
+.extras-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1rem}
+.ex-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.2rem;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.ex-icon{width:36px;height:36px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:0.65rem}
+.ex-icon.mag{background:#FDF0F5}.ex-icon.org{background:#FFF8EE}.ex-icon.gld{background:#FAEEDA}
+.ex-icon svg{width:18px;height:18px}
+.ex-title{font-family:'Nunito Sans',sans-serif;font-size:13px;font-weight:700;color:var(--text);margin-bottom:0.35rem}
+.ex-body{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);line-height:1.55;font-weight:400}
+
+/* WAHOO */
+.wahoo-hero{background:#111111;border-radius:var(--radius);padding:1.75rem 2rem;margin-bottom:1rem;position:relative;overflow:hidden}
+.wahoo-stripe{position:absolute;top:0;right:0;width:6px;height:100%;background:#D91B1B}
+.wahoo-stripe2{position:absolute;top:0;right:10px;width:2px;height:100%;background:rgba(217,27,27,0.35)}
+.wh-content{position:relative;z-index:2}
+.wh-lockup{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.wh-brand{background:#D91B1B;border-radius:6px;padding:5px 13px}
+.wh-brand-text{font-family:'Exo 2',sans-serif;font-size:17px;font-weight:800;color:#fff;letter-spacing:0.5px;line-height:1}
+.wh-award-label{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.wh-title{font-family:'Exo 2',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;color:#fff;line-height:0.92;margin-bottom:0.65rem;letter-spacing:-1px}
+.wh-title span{color:#D91B1B;display:block}
+.wh-body{font-family:'Nunito Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.7);line-height:1.65;max-width:500px;margin-bottom:1.1rem;font-weight:400}
+.wh-pills{display:flex;flex-wrap:wrap;gap:8px}
+.wh-pill{border-radius:100px;padding:5px 15px;font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:700}
+.wh-pill.red{background:#D91B1B;color:#fff}
+.wh-pill.ghost{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:rgba(255,255,255,0.8)}
+
+.award-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
+.aw-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.3rem;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.aw-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#111}
+.aw-card.female::before{background:#D91B1B}
+.aw-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:0.85rem}
+.aw-tag{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border-radius:100px}
+.aw-card .aw-tag{background:#f0f0f0;color:#111}
+.aw-card.female .aw-tag{background:#FCEBEB;color:#A32D2D}
+.aw-medal{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Exo 2',sans-serif;font-size:14px;font-weight:800}
+.aw-card .aw-medal{background:#111;color:#fff}
+.aw-card.female .aw-medal{background:#D91B1B;color:#fff}
+.aw-title{font-family:'Exo 2',sans-serif;font-size:20px;font-weight:800;line-height:1.1;margin-bottom:0.45rem;color:var(--text);letter-spacing:-0.3px}
+.aw-body{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);line-height:1.65;font-weight:400}
+.aw-prize{margin-top:0.75rem;padding:0.6rem 0.9rem;border-radius:var(--radius-sm);font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:700;background:#f5f5f5;color:#111;border:1px solid rgba(0,0,0,0.08)}
+.aw-card.female .aw-prize{background:#FCEBEB;color:#7a1f1f;border-color:rgba(217,27,27,0.12)}
+
+.algo-section{background:#f0efed;border:1px solid var(--border-light);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem}
+.algo-head{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.algo-icon{width:34px;height:34px;background:#111;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.algo-icon svg{width:17px;height:17px;fill:#D91B1B}
+.algo-title{font-family:'Exo 2',sans-serif;font-size:19px;font-weight:800;color:#111;letter-spacing:-0.3px}
+.algo-sub{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:400}
+.algo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.algo-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.9rem 1rem;border-top:3px solid #D91B1B}
+.algo-num{font-family:'Exo 2',sans-serif;font-size:27px;font-weight:800;color:#D91B1B;line-height:1;margin-bottom:0.25rem;letter-spacing:-0.5px}
+.algo-card-title{font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:700;color:var(--text);margin-bottom:0.25rem}
+.algo-card-body{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);line-height:1.55;font-weight:400}
+
+.spirit-note{background:#111;border-radius:var(--radius);padding:1.3rem 1.6rem;display:flex;align-items:flex-start;gap:14px;margin-bottom:1rem}
+.spirit-bar{width:4px;min-height:60px;background:#D91B1B;border-radius:2px;flex-shrink:0}
+.spirit-title{font-family:'Exo 2',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:0.3rem;letter-spacing:-0.3px}
+.spirit-body{font-family:'Nunito Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.62);line-height:1.65;font-weight:400}
+.spirit-body b{color:#fff;font-weight:700}
+
+/* CATEGORIES */
+.cat-section{margin-bottom:1rem}
+.cat-tabs{display:flex;gap:6px;margin-bottom:0.9rem;flex-wrap:wrap}
+.cat-tab{padding:7px 16px;border-radius:100px;font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border:1.5px solid rgba(0,0,0,0.15);background:var(--white);color:var(--muted);transition:all 0.15s}
+.cat-tab:hover{border-color:rgba(0,0,0,0.3);color:var(--text)}
+.cat-tab.a-mag{background:#C0146A;color:#fff;border-color:#C0146A}
+.cat-tab.a-red{background:#C93A1A;color:#fff;border-color:#C93A1A}
+.cat-tab.a-org{background:#E86E10;color:#fff;border-color:#E86E10}
+.cat-tab.a-gld{background:#c89000;color:#fff;border-color:#c89000}
+.cat-tab.a-teal{background:#0F6E56;color:#fff;border-color:#0F6E56}
+.cat-panel{display:none}.cat-panel.active{display:block}
+.cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.cat-row{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.7rem 0.9rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cat-name{font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:600;color:var(--text);line-height:1.3}
+.cat-badge{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:100px;white-space:nowrap;flex-shrink:0}
+.badge-pts{background:#C0146A;color:#fff}
+.badge-open{background:#E86E10;color:#fff}
+.badge-30{background:#C93A1A;color:#fff}
+.cat-note{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;font-weight:600}
+
+/* PRIZE TABLE */
+.prize-table-wrap{margin-bottom:1rem}
+.placeholder-note{background:#f0efed;border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.65rem 0.9rem;font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);margin-bottom:0.75rem;font-style:italic}
+.placeholder-note b{color:var(--text);font-weight:700;font-style:normal}
+.prize-table{width:100%;border-collapse:collapse;font-size:13px;background:var(--white);border-radius:var(--radius);overflow:hidden;border:1px solid var(--border-light)}
+.prize-table th{font-family:'Exo 2',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:0.65rem 0.9rem;color:var(--muted);border-bottom:2px solid var(--border);text-align:left;background:#f6f5f3}
+.prize-table th.r{text-align:right}
+.prize-table td{padding:0.6rem 0.9rem;border-bottom:1px solid var(--border-light);vertical-align:middle}
+.prize-table td.r{text-align:right}
+.prize-table tr.featured td{background:#FDF0F5}
+.prize-table tr:last-child td{border-bottom:none}
+.race-name{font-family:'Nunito Sans',sans-serif;font-weight:700;color:var(--text)}
+.race-type{display:inline-block;font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:100px;margin-left:6px;vertical-align:middle}
+.type-xc{background:#C93A1A;color:#fff}
+.type-tt{background:#E86E10;color:#fff}
+.type-st{background:#FDF0F5;color:#7a0040;border:1px solid rgba(192,20,106,0.2)}
+.p-total{font-family:'Exo 2',sans-serif;font-size:17px;font-weight:800;color:#C0146A}
+.p1{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:800;color:#c89000}
+.p2{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:800;color:#888780}
+.p3{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:800;color:#854F0B}
+
+/* POINTS */
+.pts-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-bottom:1rem}
+.pc{border-radius:var(--radius-sm);padding:0.6rem 0.35rem;text-align:center;background:var(--white);border:1px solid var(--border-light)}
+.pc.hd{background:#f6f5f3;border-color:var(--border)}
+.pc-pos{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:800;line-height:1;color:var(--text);letter-spacing:-0.3px}
+.pc-pos.g{color:#c89000}.pc-pos.s{color:#888780}.pc-pos.br{color:#854F0B}
+.pc-val{font-family:'Exo 2',sans-serif;font-size:20px;font-weight:800;line-height:1;letter-spacing:-0.3px}
+.pc-val.mag{color:#C0146A}.pc-val.red{color:#C93A1A}.pc-val.org{color:#E86E10}
+.pc-lbl{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);line-height:1.3;margin-top:2px}
+
+/* CALCULATOR */
+.calc-wrap{border:2px solid #C0146A;border-radius:var(--radius);padding:1.6rem;margin-bottom:1rem;background:var(--white)}
+.calc-title{font-family:'Exo 2',sans-serif;font-size:30px;font-weight:800;color:#C0146A;margin-bottom:0.2rem;letter-spacing:-0.5px}
+.calc-sub{font-family:'Nunito Sans',sans-serif;font-size:13px;color:var(--muted);margin-bottom:1.3rem;font-weight:400}
+.calc-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1rem}
+.cg label{display:block;font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
+.cg select{width:100%;font-size:13px;padding:8px 10px;border-radius:var(--radius-sm);border:1.5px solid var(--border);background:var(--white);color:var(--text);font-family:'Nunito Sans',sans-serif;cursor:pointer}
+.cg select:focus{outline:none;border-color:#C0146A}
+.cg input[type=range]{width:100%;accent-color:#C0146A;cursor:pointer}
+.pos-big{font-family:'Exo 2',sans-serif;font-size:20px;font-weight:800;color:#C0146A;text-align:center;margin-top:5px;letter-spacing:-0.3px}
+.result-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.rc{background:#f6f5f3;border-radius:var(--radius-sm);padding:1rem;text-align:center;border:1px solid var(--border-light)}
+.rc-lbl{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.rc-val{font-family:'Exo 2',sans-serif;font-size:42px;font-weight:800;line-height:1;color:#C0146A;letter-spacing:-1px}
+.rc-val.big-pts{font-size:56px;color:#C93A1A}
+.rc-val.mclr{color:#E86E10}
+.calc-alert{border-radius:var(--radius-sm);padding:0.8rem 1rem;margin-top:0.85rem;font-family:'Nunito Sans',sans-serif;font-size:13px;font-weight:600;display:none}
+.alert-npe{background:#FDF0F5;border:1px solid rgba(192,20,106,0.35);color:#7a0040}
+
+/* INSIGHTS */
+.insights-box{background:#f0efed;border:1px solid var(--border-light);border-radius:var(--radius);padding:1.3rem;margin-bottom:1rem}
+.insights-head{display:flex;align-items:center;gap:10px;margin-bottom:0.85rem}
+.i-icon{width:34px;height:34px;background:#C0146A;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.i-icon svg{width:16px;height:16px;fill:#fff}
+.i-title{font-family:'Exo 2',sans-serif;font-size:19px;font-weight:800;color:#C0146A;letter-spacing:-0.3px}
+.i-sub{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);font-weight:400}
+.insights-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.ig-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.8rem 1rem}
+.ig-lbl{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:5px}
+.ig-val{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--text);line-height:1.5;font-weight:600}
+
+/* FOOTER */
+.footer-box{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.2rem 1.5rem;text-align:center}
+.footer-box p{font-family:'Nunito Sans',sans-serif;font-size:13px;color:var(--muted);line-height:1.7;font-weight:400}
+.footer-box b{color:var(--text);font-weight:700}
+.footer-box a{color:#C0146A;font-weight:700;text-decoration:none}
+.footer-box a:hover{text-decoration:underline}
+
+@media(max-width:640px){
+  .events-grid,.how-grid,.format-grid,.podium-grid,.award-cards,.algo-grid,.extras-grid,.cat-grid,.insights-grid,.result-row,.calc-row,.stat-bar{grid-template-columns:1fr 1fr}
+  .dates-band{grid-template-columns:repeat(3,1fr)}
+  .pts-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:420px){
+  .events-grid,.how-grid,.format-grid,.award-cards,.algo-grid,.extras-grid,.cat-grid,.insights-grid,.result-row,.calc-row,.stat-bar{grid-template-columns:1fr}
+  body{padding:1rem 0.75rem 3rem}
+}
+</style>
+</head>
+<body>
+<div class="hub">
+
+<!-- HERO -->
+<div class="hero">
+  <img class="hero-img" src="moab_hero.png" alt="Hammer Drop MTB Race Series 2026">
+  <div class="hero-ov"></div>
+  <div class="hero-ov2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">MOAB Bicycle Shop &bull; 2026 Season</div>
+    <div class="hero-title">
+      Hammer Drop
+      <span class="sub">MTB Race Series</span>
+    </div>
+    <div class="hero-venues">
+      <div class="venue-row"><div class="venue-dot mag"></div><div class="venue-text">Short Track <span class="venue-tag">&bull; Harlinsdale Park, Franklin</span></div></div>
+      <div class="venue-row"><div class="venue-dot red"></div><div class="venue-text">XC Race <span class="venue-tag">&bull; Henry Horton State Park</span></div></div>
+      <div class="venue-row"><div class="venue-dot org"></div><div class="venue-text">XC TT + Skills <span class="venue-tag">&bull; Barfield Crescent MTB Park</span></div></div>
+    </div>
+    <div class="hero-pills">
+      <div class="hp hp-bikereg">Register on BikeReg</div>
+      <div class="hp hp-aion">Timing by AION App</div>
+      <div class="hp hp-plain">8 Race Events</div>
+      <div class="hp hp-plain">All Skill Levels</div>
+    </div>
+  </div>
+</div>
+
+<!-- DATES -->
+<div class="dates-band">
+  <div class="db-cell"><div class="db-day">17</div><div class="db-month">June</div></div>
+  <div class="db-cell"><div class="db-day">8</div><div class="db-month">July</div></div>
+  <div class="db-cell"><div class="db-day">22</div><div class="db-month">July</div></div>
+  <div class="db-cell"><div class="db-day">5</div><div class="db-month">August</div></div>
+  <div class="db-cell"><div class="db-day">19</div><div class="db-month">August</div></div>
+  <div class="db-cell"><div class="db-day">26</div><div class="db-month">August</div></div>
+</div>
+
+<!-- STATS -->
+<div class="stat-bar">
+  <div class="stat-card"><div class="sn mag">8</div><div class="slbl">Total Events</div></div>
+  <div class="stat-card"><div class="sn red">27</div><div class="slbl">Categories</div></div>
+  <div class="stat-card"><div class="sn org">2&times;</div><div class="slbl">Max Multiplier</div></div>
+  <div class="stat-card"><div class="sn gld">15</div><div class="slbl">Max Points / Race</div></div>
+</div>
+
+<!-- RACE EVENTS -->
+<div class="sh mag"><div class="sh-line"></div><div class="sh-text">Race Events</div><div class="sh-line"></div></div>
+<div class="events-grid">
+  <div class="ev sht">
+    <div class="ev-tag">Short Track Series</div>
+    <div class="ev-name">MOAB Short Track</div>
+    <div class="ev-loc">Harlinsdale Park &bull; 6 Dates</div>
+    <div class="ev-mult">1&times;</div>
+    <div class="ev-mult-lbl">Base Points &bull; Top 10 Scored</div>
+    <div class="ev-detail">Two races each night (20 &amp; 30 min). One points-eligible race per night based on your registered skill level.</div>
+  </div>
+  <div class="ev hor">
+    <div class="ev-tag">XC Race</div>
+    <div class="ev-name">Henry Horton XC</div>
+    <div class="ev-loc">Henry Horton State Park</div>
+    <div class="ev-mult">2&times;</div>
+    <div class="ev-mult-lbl">Double Points Event</div>
+    <div class="ev-detail">Full cross-country race. Every finish worth twice the base value toward series standings.</div>
+  </div>
+  <div class="ev bar">
+    <div class="ev-tag">XC TT + Skills</div>
+    <div class="ev-name">Barfield Crescent</div>
+    <div class="ev-loc">Barfield Crescent MTB Park</div>
+    <div class="ev-mult">1.5&times;</div>
+    <div class="ev-mult-lbl">Enhanced Points</div>
+    <div class="ev-detail">XC Time Trial with a skills section. Unique mixed format with boosted points multiplier.</div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<div class="sh red"><div class="sh-line"></div><div class="sh-text">How Points Eligibility Works</div><div class="sh-line"></div></div>
+<div class="how-grid">
+  <div class="how-card">
+    <div class="how-num">01</div>
+    <div class="how-title">You choose your level at registration</div>
+    <div class="how-body">When you register on BikeReg, you select your skill level — beginner, intermediate, advanced, or pro. That selection determines which race (20 min or 30 min) you are points-eligible in each night.</div>
+  </div>
+  <div class="how-card">
+    <div class="how-num">02</div>
+    <div class="how-title">One points race per night, no exceptions</div>
+    <div class="how-body">You can only earn series points in one race per event night. If you've already scored points in your eligible race, riding the other race counts as training miles only — you appear in results but are not scored.</div>
+  </div>
+  <div class="how-card">
+    <div class="how-num">03</div>
+    <div class="how-title">Cross-racing for training is welcome</div>
+    <div class="how-body">Want extra miles? Enter both races on a given night. Just know only your category-eligible race counts for points. The other race is listed as Not Points Eligible (NPE) in results.</div>
+  </div>
+  <div class="how-card">
+    <div class="how-num">04</div>
+    <div class="how-title">Race director may adjust your category</div>
+    <div class="how-body">At their discretion, the race director may ask a rider to move from the 20 min points race to the 30 min points race. This keeps competition appropriate and fair for everyone on the course.</div>
+    <div class="rd-note">RD decisions are final and made in the interest of fair competition for all riders.</div>
+  </div>
+</div>
+
+<!-- FORMATS -->
+<div class="sh org"><div class="sh-line"></div><div class="sh-text">Race Formats</div><div class="sh-line"></div></div>
+<div class="format-grid">
+  <div class="fmt f20">
+    <div class="fmt-head">
+      <div><div class="fmt-dur">20<span>min</span></div><div class="fmt-who">Beginner &bull; Intermediate</div></div>
+      <div class="fmt-badge">Points Race</div>
+    </div>
+    <div class="fmt-body">Beginner and intermediate riders earn series points here. Advanced/Pro riders who enter ride NPE. If you scored points in this race, entering the 30 min race that same night is NPE.</div>
+    <div class="npe-note">NPE = Not Points Eligible. Listed in results, not scored. All miles count toward ride totals.</div>
+  </div>
+  <div class="fmt f30">
+    <div class="fmt-head">
+      <div><div class="fmt-dur">30<span>min</span></div><div class="fmt-who">Advanced &bull; Pro</div></div>
+      <div class="fmt-badge">Points Race</div>
+    </div>
+    <div class="fmt-body">Advanced and pro riders earn series points here. Beginner/Intermediate riders who enter ride NPE. If the RD moves you here for points, your 20 min result becomes NPE.</div>
+    <div class="npe-note">NPE = Not Points Eligible. Listed in results, not scored. All miles count toward ride totals.</div>
+  </div>
+</div>
+
+<!-- PODIUM -->
+<div class="sh mag"><div class="sh-line"></div><div class="sh-text">Race Night Podium</div><div class="sh-line"></div></div>
+<div class="podium-hero">
+  <div class="ph-eyebrow">Short Track Series &bull; Every Race Night</div>
+  <div class="ph-title">Four podiums.<br><span>One epic night.</span></div>
+  <div class="ph-body">Every short track race night crowns four podiums — top 3 men and top 3 women in both the 20-minute and 30-minute races. No matter your category, finishing on the podium means you beat every other rider on that course that night. Everyone else earns series points, bragging rights, and the occasional special prize.</div>
+  <div class="ph-note">Podium = overall race finish, not by individual category</div>
+</div>
+<div class="podium-grid">
+  <div class="pd-card men20">
+    <div class="pd-race-tag">20 min race</div>
+    <div class="pd-title">Men's Podium</div>
+    <div class="pd-places">
+      <div class="pd-place"><div class="pd-place-label g">1st</div><div class="pd-place-sub">Overall Men</div></div>
+      <div class="pd-place"><div class="pd-place-label s">2nd</div><div class="pd-place-sub">Overall Men</div></div>
+      <div class="pd-place"><div class="pd-place-label br">3rd</div><div class="pd-place-sub">Overall Men</div></div>
+    </div>
+  </div>
+  <div class="pd-card wom20">
+    <div class="pd-race-tag">20 min race</div>
+    <div class="pd-title">Women's Podium</div>
+    <div class="pd-places">
+      <div class="pd-place"><div class="pd-place-label g">1st</div><div class="pd-place-sub">Overall Women</div></div>
+      <div class="pd-place"><div class="pd-place-label s">2nd</div><div class="pd-place-sub">Overall Women</div></div>
+      <div class="pd-place"><div class="pd-place-label br">3rd</div><div class="pd-place-sub">Overall Women</div></div>
+    </div>
+  </div>
+  <div class="pd-card men30">
+    <div class="pd-race-tag">30 min race</div>
+    <div class="pd-title">Men's Podium</div>
+    <div class="pd-places">
+      <div class="pd-place"><div class="pd-place-label g">1st</div><div class="pd-place-sub">Overall Men</div></div>
+      <div class="pd-place"><div class="pd-place-label s">2nd</div><div class="pd-place-sub">Overall Men</div></div>
+      <div class="pd-place"><div class="pd-place-label br">3rd</div><div class="pd-place-sub">Overall Men</div></div>
+    </div>
+  </div>
+  <div class="pd-card wom30">
+    <div class="pd-race-tag">30 min race</div>
+    <div class="pd-title">Women's Podium</div>
+    <div class="pd-places">
+      <div class="pd-place"><div class="pd-place-label g">1st</div><div class="pd-place-sub">Overall Women</div></div>
+      <div class="pd-place"><div class="pd-place-label s">2nd</div><div class="pd-place-sub">Overall Women</div></div>
+      <div class="pd-place"><div class="pd-place-label br">3rd</div><div class="pd-place-sub">Overall Women</div></div>
+    </div>
+  </div>
+</div>
+<div class="extras-grid">
+  <div class="ex-card">
+    <div class="ex-icon mag"><svg viewBox="0 0 20 20" fill="#C0146A"><path d="M10 2l2.4 4.8 5.3.8-3.8 3.7.9 5.2L10 14l-4.8 2.5.9-5.2L2.3 7.6l5.3-.8z"/></svg></div>
+    <div class="ex-title">Bragging rights for all</div>
+    <div class="ex-body">Every category has its own series points race. Topping your category standings is its own trophy — even without the overall podium.</div>
+  </div>
+  <div class="ex-card">
+    <div class="ex-icon org"><svg viewBox="0 0 20 20" fill="#E86E10"><path d="M10 2a8 8 0 100 16A8 8 0 0010 2zm1 11H9V9h2v4zm0-6H9V5h2v2z"/></svg></div>
+    <div class="ex-title">XC Short Track Premes</div>
+    <div class="ex-body">On select nights, a mid-race preme sprint or skills challenge may be announced with special prizes. Watch for announcements at each event.</div>
+  </div>
+  <div class="ex-card">
+    <div class="ex-icon gld"><svg viewBox="0 0 20 20" fill="#c89000"><path d="M4 3h12v2l-4 5v5l-4-2V10L4 5V3z"/></svg></div>
+    <div class="ex-title">Special race prizes</div>
+    <div class="ex-body">Individual races may feature bonus prizes, sponsor giveaways, or category-specific awards. Details announced on race night.</div>
+  </div>
+</div>
+
+<!-- WAHOO -->
+<div class="sh wah"><div class="sh-line"></div><div class="sh-text">Wahoo Fitness Progression Award</div><div class="sh-line"></div></div>
+<div class="wahoo-hero">
+  <div class="wahoo-stripe"></div><div class="wahoo-stripe2"></div>
+  <div class="wh-content">
+    <div class="wh-lockup">
+      <div class="wh-brand"><div class="wh-brand-text">WAHOO FITNESS</div></div>
+      <div class="wh-award-label">Series Special Award &bull; 2026</div>
+    </div>
+    <div class="wh-title">Best of the<span>Best Progression</span></div>
+    <div class="wh-body">This isn't about who finished first. It's about who grew the most. One male and one female rider will be recognized at the end of the Hammer Drop series for outstanding performance improvement — measured across every race, every lap, every result using a special performance improvement algorithm.</div>
+    <div class="wh-pills">
+      <div class="wh-pill red">1 Male Winner</div>
+      <div class="wh-pill red">1 Female Winner</div>
+      <div class="wh-pill ghost">Performance algorithm scored</div>
+      <div class="wh-pill ghost">Full series considered</div>
+    </div>
+  </div>
+</div>
+<div class="award-cards">
+  <div class="aw-card">
+    <div class="aw-top"><div class="aw-tag">Male Award</div><div class="aw-medal">M</div></div>
+    <div class="aw-title">Wahoo Fitness Male Progression Award</div>
+    <div class="aw-body">Awarded to the male rider who demonstrates the greatest measurable performance improvement across the full Hammer Drop series — regardless of finishing position, podium results, or category standing.</div>
+    <div class="aw-prize">Wahoo Fitness prize package &bull; Series recognition &bull; Prize TBD</div>
+  </div>
+  <div class="aw-card female">
+    <div class="aw-top"><div class="aw-tag">Female Award</div><div class="aw-medal">F</div></div>
+    <div class="aw-title">Wahoo Fitness Female Progression Award</div>
+    <div class="aw-body">Awarded to the female rider who demonstrates the greatest measurable performance improvement across the full Hammer Drop series — regardless of finishing position, podium results, or category standing.</div>
+    <div class="aw-prize">Wahoo Fitness prize package &bull; Series recognition &bull; Prize TBD</div>
+  </div>
+</div>
+<div class="algo-section">
+  <div class="algo-head">
+    <div class="algo-icon"><svg viewBox="0 0 16 16"><path d="M2 12h2v2H2zm3-4h2v6H5zm3-3h2v9H8zm3-4h2v13h-2z"/></svg></div>
+    <div>
+      <div class="algo-title">How progression is measured</div>
+      <div class="algo-sub">A proprietary performance improvement score calculated across the full series — not a single race result</div>
+    </div>
+  </div>
+  <div class="algo-grid">
+    <div class="algo-card"><div class="algo-num">01</div><div class="algo-card-title">Tracks your trajectory</div><div class="algo-card-body">Results are charted race over race to measure how your performance trend lines move throughout the full season.</div></div>
+    <div class="algo-card"><div class="algo-num">02</div><div class="algo-card-title">Relative to the field</div><div class="algo-card-body">Improvement is measured against the rest of the field — not just your own times — so race conditions and competition strength are factored in.</div></div>
+    <div class="algo-card"><div class="algo-num">03</div><div class="algo-card-title">Every race counts</div><div class="algo-card-body">The algorithm looks at your complete body of work across all Hammer Drop events — no single standout result wins this award.</div></div>
+  </div>
+</div>
+<div class="spirit-note">
+  <div class="spirit-bar"></div>
+  <div>
+    <div class="spirit-title">The spirit of this award</div>
+    <div class="spirit-body">The Wahoo Fitness Progression Award exists to celebrate <b>growth over glory</b>. You don't need to win a race. You don't need to podium. You just need to show up, race hard, and get better — and the data will tell the story. This award honors the rider who commits to the process and earns it lap by lap.</div>
+  </div>
+</div>
+
+<!-- CATEGORIES -->
+<div class="sh gld"><div class="sh-line"></div><div class="sh-text">Categories</div><div class="sh-line"></div></div>
+<div class="cat-section">
+  <div class="cat-tabs">
+    <div class="cat-tab a-mag" onclick="switchTab('junior')">Junior</div>
+    <div class="cat-tab" onclick="switchTab('beginner')">Beginner</div>
+    <div class="cat-tab" onclick="switchTab('sport')">Sport</div>
+    <div class="cat-tab" onclick="switchTab('expert')">Expert / Pro</div>
+    <div class="cat-tab" onclick="switchTab('ebike')">E-Bike</div>
+  </div>
+  <div class="cat-panel active" id="panel-junior">
+    <div class="cat-note">20-min race &bull; 18 &amp; under</div>
+    <div class="cat-grid">
+      <div class="cat-row"><div class="cat-name">Junior Beginner Men (18 &amp; under)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Junior Beginner Women (18 &amp; under)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Junior Elite Men (18 &amp; under)</div><div class="cat-badge badge-open">Open</div></div>
+      <div class="cat-row"><div class="cat-name">Junior Elite Women (18 &amp; under)</div><div class="cat-badge badge-open">Open</div></div>
+    </div>
+  </div>
+  <div class="cat-panel" id="panel-beginner">
+    <div class="cat-note">20-min race &bull; CAT 3 &bull; Points / Podium</div>
+    <div class="cat-grid">
+      <div class="cat-row"><div class="cat-name">Beginner Men CAT 3 (34 &amp; under)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Beginner Women CAT 3 (34 &amp; under)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Beginner Men CAT 3 (35+)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Beginner Women CAT 3 (35+)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+    </div>
+  </div>
+  <div class="cat-panel" id="panel-sport">
+    <div class="cat-note">20-min &amp; 30-min race &bull; CAT 2</div>
+    <div class="cat-grid">
+      <div class="cat-row"><div class="cat-name">Sport Men CAT 2 (34 &amp; under)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Women CAT 2 (34 &amp; under)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Men CAT 2 (35–49)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Women CAT 2 (35–49)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Men Masters CAT 2 (50–59)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Women Masters CAT 2 (50–59)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Men Veterans CAT 2 (60+)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+      <div class="cat-row"><div class="cat-name">Sport Women Veterans CAT 2 (60+)</div><div class="cat-badge badge-pts">Points / Podium</div></div>
+    </div>
+  </div>
+  <div class="cat-panel" id="panel-expert">
+    <div class="cat-note">30-min race &bull; CAT 1 &amp; Pro/Elite</div>
+    <div class="cat-grid">
+      <div class="cat-row"><div class="cat-name">Pro / Elite Men (Open)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Pro / Elite Women (Open)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Expert Men CAT 1 (34 &amp; under)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Expert Women CAT 1 (34 &amp; under)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Expert Men CAT 1 (35–49)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Expert Women CAT 1 (35–49)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Expert Men Masters CAT 1 (50+)</div><div class="cat-badge badge-30">30 min</div></div>
+      <div class="cat-row"><div class="cat-name">Expert Women Masters CAT 1 (50+)</div><div class="cat-badge badge-30">30 min</div></div>
+    </div>
+  </div>
+  <div class="cat-panel" id="panel-ebike">
+    <div class="cat-note">20-min race &bull; All levels</div>
+    <div class="cat-grid">
+      <div class="cat-row"><div class="cat-name">Pro / Elite E-Bike (Open)</div><div class="cat-badge badge-open">Open</div></div>
+      <div class="cat-row"><div class="cat-name">Amateur E-Bike</div><div class="cat-badge badge-open">Open</div></div>
+      <div class="cat-row"><div class="cat-name">Women E-Bike</div><div class="cat-badge badge-open">Open</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PRIZE MONEY -->
+<div class="sh red"><div class="sh-line"></div><div class="sh-text">Prize Money</div><div class="sh-line"></div></div>
+<div class="prize-table-wrap">
+  <div class="placeholder-note"><b>Placeholder amounts</b> — final prize structure subject to change. Prizes paid to overall podium finishers (1st, 2nd, 3rd) per race.</div>
+  <table class="prize-table">
+    <thead><tr><th>Race</th><th class="r">Total Purse</th><th class="r">1st</th><th class="r">2nd</th><th class="r">3rd</th></tr></thead>
+    <tbody>
+      <tr class="featured"><td><span class="race-name">Henry Horton XC</span><span class="race-type type-xc">XC Race</span></td><td class="r"><span class="p-total">$300</span></td><td class="r"><span class="p1">$150</span></td><td class="r"><span class="p2">$90</span></td><td class="r"><span class="p3">$60</span></td></tr>
+      <tr><td><span class="race-name">Barfield Crescent XC TT</span><span class="race-type type-tt">TT + Skills</span></td><td class="r"><span class="p-total">$205</span></td><td class="r"><span class="p1">$100</span></td><td class="r"><span class="p2">$65</span></td><td class="r"><span class="p3">$40</span></td></tr>
+      <tr><td><span class="race-name">Short Track #1</span><span class="race-type type-st">Jun 17</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+      <tr><td><span class="race-name">Short Track #2</span><span class="race-type type-st">Jul 8</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+      <tr><td><span class="race-name">Short Track #3</span><span class="race-type type-st">Jul 22</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+      <tr><td><span class="race-name">Short Track #4</span><span class="race-type type-st">Aug 5</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+      <tr><td><span class="race-name">Short Track #5</span><span class="race-type type-st">Aug 19</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+      <tr><td><span class="race-name">Short Track #6</span><span class="race-type type-st">Aug 26</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+      <tr><td><span class="race-name">Short Track #7</span><span class="race-type type-st">Short Track</span></td><td class="r"><span class="p-total">$55</span></td><td class="r"><span class="p1">$25</span></td><td class="r"><span class="p2">$20</span></td><td class="r"><span class="p3">$10</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- POINTS STRUCTURE -->
+<div class="sh mag"><div class="sh-line"></div><div class="sh-text">Points Structure</div><div class="sh-line"></div></div>
+<div class="pts-grid" id="pts-grid"></div>
+
+<!-- CALCULATOR -->
+<div class="sh red" style="margin-top:0.5rem"><div class="sh-line"></div><div class="sh-text">Points Calculator</div><div class="sh-line"></div></div>
+<div class="calc-wrap">
+  <div class="calc-title">What could you earn?</div>
+  <div class="calc-sub">Select your race type, eligibility, and finish position to see your series points.</div>
+  <div class="calc-row">
+    <div class="cg"><label>Race Type</label><select id="c-race"><option value="1">Short Track (1&times;)</option><option value="1.5">Barfield XC TT (1.5&times;)</option><option value="2">Henry Horton XC (2&times;)</option></select></div>
+    <div class="cg"><label>Eligibility</label><select id="c-elig"><option value="pts">Points Eligible</option><option value="npe">Not Points Eligible (NPE)</option></select></div>
+    <div class="cg"><label>Position: <span id="pos-lbl" style="color:#C0146A;font-weight:800">1st</span></label><input type="range" id="c-pos" min="1" max="10" value="1" step="1"><div class="pos-big" id="pos-big">1st Place</div></div>
+  </div>
+  <div class="result-row">
+    <div class="rc"><div class="rc-lbl">Base Points</div><div class="rc-val" id="r-base">15</div></div>
+    <div class="rc"><div class="rc-lbl">Multiplier</div><div class="rc-val mclr" id="r-mult">1&times;</div></div>
+    <div class="rc"><div class="rc-lbl">Series Points</div><div class="rc-val big-pts" id="r-total">15</div></div>
+  </div>
+  <div class="calc-alert alert-npe" id="npe-alert">You are Not Points Eligible (NPE) for this race. Your finish appears in results and miles are counted, but no series points are awarded.</div>
+</div>
+
+<!-- INSIGHTS -->
+<div class="insights-box">
+  <div class="insights-head">
+    <div class="i-icon"><svg viewBox="0 0 16 16"><path d="M2 12h2v2H2zm3-4h2v6H5zm3-3h2v9H8zm3-4h2v13h-2z"/></svg></div>
+    <div>
+      <div class="i-title">Weekly Results &amp; Race Insights</div>
+      <div class="i-sub">Posted after every race night — full data to benchmark yourself against the field</div>
+    </div>
+  </div>
+  <div class="insights-grid">
+    <div class="ig-card"><div class="ig-lbl">Category Results</div><div class="ig-val">Full standings by category posted each week</div></div>
+    <div class="ig-card"><div class="ig-lbl">Lap Time Comparison</div><div class="ig-val">See how your times stack up vs. other racers</div></div>
+    <div class="ig-card"><div class="ig-lbl">Series Standings</div><div class="ig-val">Cumulative points updated after every event</div></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer-box">
+  <p><b>Register at <a href="https://www.bikereg.com" target="_blank">BikeReg</a></b> — select your skill level to lock in your points-eligible race. &bull; <b>Timing by AION App.</b> &bull; Presented by <b>MOAB Bicycle Shop</b>, Franklin TN. &bull; Questions? Contact the MOAB race team.</p>
+</div>
+
+</div>
+<script>
+const base=[15,12,10,9,8,7,6,5,4,3];
+const ord=["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th"];
+const grid=document.getElementById('pts-grid');
+function cell(html,cls){const d=document.createElement('div');d.className='pc'+(cls?' '+cls:'');d.innerHTML=html;return d;}
+grid.appendChild(cell('<div class="pc-lbl">Position</div>','hd'));
+grid.appendChild(cell('<div class="pc-lbl">Short Track 1&times;</div>','hd'));
+grid.appendChild(cell('<div class="pc-lbl">Barfield 1.5&times;</div>','hd'));
+grid.appendChild(cell('<div class="pc-lbl">Henry Horton 2&times;</div>','hd'));
+base.forEach((p,i)=>{
+  const pc=i===0?'g':i===1?'s':i===2?'br':'';
+  grid.appendChild(cell(`<div class="pc-pos ${pc}">${ord[i]}</div>`));
+  grid.appendChild(cell(`<div class="pc-val mag">${p}</div>`));
+  grid.appendChild(cell(`<div class="pc-val red">${Math.round(p*1.5)}</div>`));
+  grid.appendChild(cell(`<div class="pc-val org">${p*2}</div>`));
+});
+const posSlider=document.getElementById('c-pos');
+const posLbl=document.getElementById('pos-lbl');
+const posBig=document.getElementById('pos-big');
+const cRace=document.getElementById('c-race');
+const cElig=document.getElementById('c-elig');
+const rBase=document.getElementById('r-base');
+const rMult=document.getElementById('r-mult');
+const rTotal=document.getElementById('r-total');
+const npeAlert=document.getElementById('npe-alert');
+function calc(){
+  const pos=parseInt(posSlider.value);
+  const mult=parseFloat(cRace.value);
+  const npe=cElig.value==='npe';
+  const bp=base[pos-1];
+  posLbl.textContent=ord[pos-1];
+  posBig.textContent=ord[pos-1]+' Place';
+  rBase.textContent=bp;
+  rMult.textContent=mult+'×';
+  npeAlert.style.display='none';
+  if(npe){rTotal.textContent='0';npeAlert.style.display='block';}
+  else{rTotal.textContent=Math.round(bp*mult);}
+}
+posSlider.addEventListener('input',calc);
+cRace.addEventListener('change',calc);
+cElig.addEventListener('change',calc);
+calc();
+const colorMap={junior:'a-mag',beginner:'a-red',sport:'a-org',expert:'a-gld',ebike:'a-teal'};
+const tabIds=['junior','beginner','sport','expert','ebike'];
+function switchTab(id){
+  document.querySelectorAll('.cat-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.cat-tab').forEach((t,i)=>{t.className='cat-tab';if(tabIds[i]===id)t.classList.add(colorMap[id]);});
+  document.getElementById('panel-'+id).classList.add('active');
+}
+</script>
+</body>
+</html>
