@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,25 +16,25 @@
 }
 body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:1.5rem 1rem 4rem}
 .hub{max-width:900px;margin:0 auto}
-.moab-logo{height:44px;width:auto;display:block;margin-bottom:0.85rem;filter:brightness(0) invert(1);}
 
 /* HERO */
-.hero{border-radius:var(--radius);overflow:hidden;position:relative;min-height:360px;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:1rem}
+.hero{border-radius:var(--radius);overflow:hidden;position:relative;min-height:380px;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:1rem}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
-.hero-ov{position:absolute;inset:0;background:#1A0A04;opacity:0.48}
-.hero-ov2{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,10,4,0.6) 0%,rgba(26,10,4,0.25) 45%,transparent 70%)}
-.hero-content{position:relative;z-index:3;padding:1rem 2.25rem 0}.hero-eyebrow{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.4rem}
-.hero-title{font-family:'Exo 2',sans-serif;font-weight:800;font-size:clamp(48px,7.5vw,80px);line-height:1;color:#fff;margin-bottom:0;letter-spacing:-1px;display:flex;align-items:baseline;gap:0.4em}
-.hero-title .sub{font-family:'Exo 2',sans-serif;font-weight:600;font-size:clamp(18px,2.5vw,26px);color:#E86E10;display:inline;line-height:1;letter-spacing:-0.3px}
-.hero-pills{position:relative;z-index:3;display:flex;flex-wrap:wrap;gap:8px;padding:2.25rem 2.25rem 2.25rem;margin-top:auto}
+.hero-ov{position:absolute;inset:0;background:#1A0A04;opacity:0.45}
+.hero-ov2{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,10,4,0.65) 0%,rgba(26,10,4,0.2) 50%,rgba(26,10,4,0.55) 100%)}
+.hero-content{position:relative;z-index:3;padding:1rem 2.25rem 0}
+.hero-eyebrow{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:0.4rem}
+.hero-title{font-family:'Exo 2',sans-serif;font-weight:800;font-size:clamp(42px,7vw,80px);line-height:1;color:#fff;margin-bottom:0;letter-spacing:-1px;display:flex;align-items:baseline;gap:0.4em;flex-wrap:wrap}
+.hero-title .sub{font-family:'Exo 2',sans-serif;font-weight:600;font-size:clamp(16px,2.5vw,26px);color:#E86E10;display:inline;line-height:1;letter-spacing:-0.3px}
+.hero-pills{position:relative;z-index:3;display:flex;flex-wrap:wrap;gap:8px;padding:1.5rem 2.25rem 2rem;margin-top:auto}
 .hp{border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;font-family:'Nunito Sans',sans-serif;letter-spacing:0.2px}
 .hp-bikereg{background:#E86E10;color:#fff}
 .hp-plain{background:rgba(255,255,255,0.13);border:1px solid rgba(255,255,255,0.28);color:#fff}
-  
+
 /* DATES */
 .dates-band{background:#C0146A;border-radius:var(--radius-sm);padding:0.9rem 1rem;display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-bottom:1rem}
 .db-cell{text-align:center}
-.db-day{font-family:'Exo 2',sans-serif;font-size:22px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.5px}
+.db-day{font-family:'Exo 2',sans-serif;font-size:20px;font-weight:800;color:#fff;line-height:1;letter-spacing:-0.5px}
 .db-month{font-family:'Nunito Sans',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.65)}
 .db-cell.special .db-day{color:#FFD97D}
 .db-cell.special .db-month{color:rgba(255,215,120,0.8)}
@@ -58,7 +57,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .highlight-card.red .hl-icon{background:#FFF4EE;color:#C93A1A}
 .highlight-card.org .hl-icon{background:#FFF8EE;color:#E86E10}
 .hl-icon svg{width:18px;height:18px}
-.hl-body{flex:1}
+.hl-body{flex:1;min-width:0}
 .hl-title{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:800;line-height:1;letter-spacing:-0.3px;margin-bottom:3px}
 .highlight-card.mag .hl-title{color:#7a0040}
 .highlight-card.red .hl-title{color:#7a1f00}
@@ -111,10 +110,12 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .fmt.f30 .npe-note{background:rgba(201,58,26,0.08);color:#7a1f00;border:1px solid rgba(201,58,26,0.2)}
 
 /* REGISTRATION */
-.reg-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1rem}
+.reg-note{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-style:italic;margin-bottom:0.75rem}
+.reg-grid-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:1rem}
 .reg-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.2rem;box-shadow:0 1px 4px rgba(0,0,0,0.04);display:flex;flex-direction:column}
 .reg-card.featured{border-color:#C0146A;background:#FDF0F5}
 .reg-card.featured2{border-color:#E86E10}
+.reg-links-card{grid-column:span 2;background:#f0efed;box-shadow:none}
 .reg-tag{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:0.6rem;width:fit-content}
 .reg-card.featured .reg-tag{background:#C0146A;color:#fff}
 .reg-card.featured2 .reg-tag{background:#E86E10;color:#fff}
@@ -130,7 +131,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .reg-card.featured .reg-btn{background:#C0146A;color:#fff}
 .reg-card.featured2 .reg-btn{background:#E86E10;color:#fff}
 .reg-card:not(.featured):not(.featured2) .reg-btn{background:var(--text);color:#fff}
-.reg-note{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-style:italic;margin-bottom:0.75rem}
 
 /* PODIUM */
 .podium-hero{background:#C0146A;border-radius:var(--radius);padding:1.75rem 2rem;margin-bottom:1rem;position:relative;overflow:hidden}
@@ -143,13 +143,14 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .podium-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:1rem}
 .pd-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.2rem;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
 .pd-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.pd-card.men20::before{background:#C0146A}.pd-card.wom20::before{background:#C93A1A}
-.pd-card.men30::before{background:#E86E10}.pd-card.wom30::before{background:#c89000}
+.pd-card.men20::before{background:#C0146A}
+.pd-card.men30::before{background:#E86E10}
 .pd-race-tag{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:3px 9px;border-radius:100px;display:inline-block;margin-bottom:0.65rem}
-.men20 .pd-race-tag{background:#FDF0F5;color:#7a0040}.wom20 .pd-race-tag{background:#FFF4EE;color:#7a1f00}
-.men30 .pd-race-tag{background:#FFF8EE;color:#8a3800}.wom30 .pd-race-tag{background:#FAEEDA;color:#7a5a00}
+.men20 .pd-race-tag{background:#FDF0F5;color:#7a0040}
+.men30 .pd-race-tag{background:#FFF8EE;color:#8a3800}
 .pd-title{font-family:'Exo 2',sans-serif;font-size:21px;font-weight:800;line-height:1;margin-bottom:0.8rem;letter-spacing:-0.3px}
-.men20 .pd-title{color:#C0146A}.wom20 .pd-title{color:#C93A1A}.men30 .pd-title{color:#E86E10}.wom30 .pd-title{color:#c89000}
+.men20 .pd-title{color:#C0146A}
+.men30 .pd-title{color:#E86E10}
 .pd-places{display:flex;gap:8px}
 .pd-place{flex:1;text-align:center;padding:0.7rem 0.25rem;border-radius:var(--radius-sm);background:#f6f5f3}
 .pd-place-label{font-family:'Exo 2',sans-serif;font-size:20px;font-weight:800;line-height:1;letter-spacing:-0.3px}
@@ -168,11 +169,11 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .wahoo-stripe{position:absolute;top:0;right:0;width:6px;height:100%;background:#D91B1B}
 .wahoo-stripe2{position:absolute;top:0;right:10px;width:2px;height:100%;background:rgba(217,27,27,0.35)}
 .wh-content{position:relative;z-index:2}
-.wh-lockup{display:flex;align-items:center;gap:10px;margin-bottom:1rem}
+.wh-lockup{display:flex;align-items:center;gap:10px;margin-bottom:1rem;flex-wrap:wrap}
 .wh-brand{background:#D91B1B;border-radius:6px;padding:5px 13px}
 .wh-brand-text{font-family:'Exo 2',sans-serif;font-size:17px;font-weight:800;color:#fff;letter-spacing:0.5px;line-height:1}
 .wh-award-label{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4)}
-.wh-title{font-family:'Exo 2',sans-serif;font-size:clamp(32px,5vw,52px);font-weight:800;color:#fff;line-height:0.92;margin-bottom:0.65rem;letter-spacing:-1px}
+.wh-title{font-family:'Exo 2',sans-serif;font-size:clamp(28px,5vw,52px);font-weight:800;color:#fff;line-height:0.92;margin-bottom:0.65rem;letter-spacing:-1px}
 .wh-title span{color:#D91B1B;display:block}
 .wh-body{font-family:'Nunito Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.7);line-height:1.65;max-width:500px;margin-bottom:1.1rem;font-weight:400}
 .wh-pills{display:flex;flex-wrap:wrap;gap:8px}
@@ -221,22 +222,14 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .cat-tab.active.f-20{background:#C0146A;border-color:#C0146A}
 .cat-tab.active.f-30{background:#C93A1A;border-color:#C93A1A}
 .cat-all-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
-.cat-group{margin-bottom:0.75rem}
-.cat-group:last-child{margin-bottom:0}
 .cat-group-header{display:flex;align-items:center;gap:8px;margin-bottom:0.5rem;padding-bottom:0.4rem;border-bottom:2px solid var(--border-light)}
 .cat-group-title{font-family:'Exo 2',sans-serif;font-size:14px;font-weight:800;color:var(--text);letter-spacing:-0.2px}
 .cat-group-subtitle{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-weight:600}
 .cat-group-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
-.cat-row{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.65rem 0.9rem;display:flex;align-items:center;justify-content:space-between;gap:8px}
-.cat-row.hidden{display:none}
-.cat-name{font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:600;color:var(--text);line-height:1.3}
-.cat-badge{font-family:'Nunito Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:3px 9px;border-radius:100px;white-space:nowrap;flex-shrink:0}
-.badge-pts{background:#C0146A;color:#fff}
-.badge-30{background:#C93A1A;color:#fff}
-.badge-free{background:#0F6E56;color:#fff}
+.cat-row{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.65rem 0.9rem;display:flex;align-items:center;justify-content:flex-start;gap:8px}
+.cat-name{font-family:'Nunito Sans',sans-serif;font-size:13px;font-weight:600;color:var(--text);line-height:1.3}
 
 /* PRIZE TABLE */
-.prize-table-wrap{margin-bottom:1rem}
 .prize-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:0.75rem}
 .prize-card{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);padding:1.2rem;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
 .prize-card.featured{border-color:#C93A1A;background:#FFF4EE}
@@ -255,7 +248,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .pp-amt{font-family:'Exo 2',sans-serif;font-size:16px;font-weight:800;line-height:1}
 .pp-amt.g{color:#c89000}.pp-amt.s{color:#888780}.pp-amt.br{color:#854F0B}
 .pp-lbl{font-family:'Nunito Sans',sans-serif;font-size:10px;color:var(--muted);font-weight:600;margin-top:2px}
-.prize-note{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-style:italic;padding:0.6rem 0.9rem;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm)}
+.prize-note{font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-style:italic;padding:0.6rem 0.9rem;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-sm);margin-bottom:1rem}
 
 /* POINTS */
 .pts-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-bottom:1rem}
@@ -299,6 +292,20 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .ig-lbl{font-family:'Nunito Sans',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:5px}
 .ig-val{font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--text);line-height:1.5;font-weight:600}
 
+/* PODIUM CALLOUT */
+.podium-callout{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0.9rem}
+.pc-block{border-radius:var(--radius-sm);padding:0.85rem 1.1rem;border-left:4px solid transparent}
+.pc-block.mag{background:#FDF0F5;border-color:#C0146A}
+.pc-block.red{background:#FFF4EE;border-color:#C93A1A}
+.pc-block-label{font-family:'Exo 2',sans-serif;font-size:14px;font-weight:800;letter-spacing:-0.2px;margin-bottom:0.3rem}
+.pc-block.mag .pc-block-label{color:#7a0040}
+.pc-block.red .pc-block-label{color:#7a1f00}
+.pc-block-body{font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:600;color:var(--muted)}
+
+/* YOUTUBE */
+.yt-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.12)}
+.yt-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
 /* FOOTER */
 .footer-box{background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius);overflow:hidden}
 .footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border-light)}
@@ -314,36 +321,35 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 .footer-bottom a{color:#C0146A;font-weight:700;text-decoration:none}
 .footer-bottom a:hover{text-decoration:underline}
 
+/* MEDIA QUERIES */
 @media(max-width:640px){
-  .how-grid,.format-grid,.podium-grid,.award-cards,.algo-grid,.extras-grid,.cat-all-grid,.insights-grid,.result-row,.calc-row,.stat-bar,.footer-grid,.reg-grid,.prize-cards{grid-template-columns:1fr 1fr}
+  .how-grid,.format-grid,.podium-grid,.award-cards,.extras-grid,.insights-grid,.result-row,.stat-bar,.footer-grid,.prize-cards{grid-template-columns:1fr 1fr}
+  .algo-grid{grid-template-columns:1fr 1fr}
+  .cat-all-grid{grid-template-columns:1fr}
+  .calc-row{grid-template-columns:1fr 1fr}
   .dates-band{grid-template-columns:repeat(4,1fr)}
   .pts-grid{grid-template-columns:repeat(2,1fr)}
   .footer-col{border-right:none;border-bottom:1px solid var(--border-light)}
+  .podium-callout{grid-template-columns:1fr}
+  .reg-grid-wrap{grid-template-columns:1fr 1fr}
+  .reg-links-card{grid-column:span 2}
+  .hero-title{font-size:clamp(32px,8vw,56px)}
+  .wh-title{font-size:clamp(24px,6vw,40px)}
 }
 @media(max-width:420px){
-  .how-grid,.format-grid,.award-cards,.algo-grid,.extras-grid,.cat-all-grid,.insights-grid,.result-row,.calc-row,.stat-bar,.footer-grid,.reg-grid,.prize-cards{grid-template-columns:1fr}
   body{padding:1rem 0.75rem 3rem}
+  .how-grid,.format-grid,.award-cards,.extras-grid,.insights-grid,.result-row,.stat-bar,.footer-grid,.prize-cards,.algo-grid{grid-template-columns:1fr}
+  .calc-row{grid-template-columns:1fr}
   .dates-band{grid-template-columns:repeat(4,1fr)}
+  .reg-grid-wrap{grid-template-columns:1fr}
+  .reg-links-card{grid-column:span 1}
+  .hero{min-height:300px}
+  .hero-pills{padding:1rem 1.25rem 1.5rem}
+  .hero-content{padding:0.75rem 1.25rem 0}
+  .pts-grid{grid-template-columns:repeat(2,1fr)}
+  .podium-callout{grid-template-columns:1fr}
+  .ph-title{font-size:28px}
 }
-
-/* PODIUM CALLOUT */
-.podium-callout{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0.9rem}
-.pc-block{border-radius:var(--radius-sm);padding:0.85rem 1.1rem;border-left:4px solid transparent}
-.pc-block.mag{background:#FDF0F5;border-color:#C0146A}
-.pc-block.red{background:#FFF4EE;border-color:#C93A1A}
-.pc-block-label{font-family:'Exo 2',sans-serif;font-size:14px;font-weight:800;letter-spacing:-0.2px;margin-bottom:0.3rem}
-.pc-block.mag .pc-block-label{color:#7a0040}
-.pc-block.red .pc-block-label{color:#7a1f00}
-.pc-block-body{font-family:'Nunito Sans',sans-serif;font-size:12px;font-weight:600;color:var(--muted)}
-/* clean cat rows - no badge needed */
-.cat-row{justify-content:flex-start}
-.cat-name{font-size:13px}
-@media(max-width:640px){.podium-callout{grid-template-columns:1fr}}
-
-/* YOUTUBE EMBED */
-.yt-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:var(--radius);overflow:hidden;margin-bottom:1rem;box-shadow:0 2px 12px rgba(0,0,0,0.12)}
-.yt-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-
 </style>
 </head>
 <body>
@@ -355,6 +361,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
   <div class="hero-ov"></div>
   <div class="hero-ov2"></div>
   <div class="hero-content">
+    <div class="hero-eyebrow">2026 Season</div>
     <div class="hero-title">
       Hammer Drop <span class="sub">MTB Race Series</span>
     </div>
@@ -367,7 +374,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
   </div>
 </div>
 
-<!-- DATES - all 8 events -->
+<!-- DATES -->
 <div class="dates-band">
   <div class="db-cell"><div class="db-day">Jun 24</div><div class="db-month">Short Track</div></div>
   <div class="db-cell special"><div class="db-day">Jul 12</div><div class="db-month">Henry Horton</div></div>
@@ -421,15 +428,15 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
   <p>Sponsored by <b>MOAB Bike Shop</b>, the Hammer Drop MTB Series is a grassroots, fun, competitive mountain bike race series featuring short-track, endurance (cross-country), and time-trial/technical trail racing across Middle Tennessee. <b>One summer. Three race formats. Endless opportunities to throw down.</b> A series designed to grow the local MTB racing community.</p>
 </div>
 
-<!-- YOUTUBE VIDEO -->
+<!-- YOUTUBE -->
 <div class="yt-wrap">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EJB3tB9EycE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/EJB3tB9EycE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
 <!-- REGISTRATION -->
 <div class="sh red"><div class="sh-line"></div><div class="sh-text">Registration</div><div class="sh-line"></div></div>
 <p class="reg-note">Choose what works best for you — register for an All Access Pass, Series Pass, or Individual race. Riders competing for overall series points must register for the category labeled <b>POINTS/PODIUM RACE</b>.</p>
-<div class="reg-grid">
+<div class="reg-grid-wrap">
   <div class="reg-card featured">
     <div class="reg-tag">Best Value</div>
     <div class="reg-title">All Access Pass</div>
@@ -451,8 +458,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
     <div class="reg-body">Henry Horton XC + Barfield Skills/TT (2 races). Great for XC riders chasing the big points multipliers.</div>
     <a href="https://www.bikereg.com/moabseries-2026" target="_blank" class="reg-btn">Register &rarr;</a>
   </div>
-</div>
-<div class="reg-grid" style="margin-top:8px;margin-bottom:1rem">
   <div class="reg-card">
     <div class="reg-tag">Individual</div>
     <div class="reg-title">Single Race</div>
@@ -460,7 +465,7 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
     <div class="reg-body">Individual race entry. Henry Horton, Barfield, or a single Short Track night.</div>
     <a href="https://www.bikereg.com/shorttrack26" target="_blank" class="reg-btn">Register &rarr;</a>
   </div>
-  <div class="reg-card" style="grid-column:span 2;background:#f0efed">
+  <div class="reg-card reg-links-card">
     <div style="font-family:'Exo 2',sans-serif;font-size:14px;font-weight:800;color:var(--text);margin-bottom:0.4rem">Individual Event Links</div>
     <div style="font-family:'Nunito Sans',sans-serif;font-size:12px;color:var(--muted);line-height:1.8">
       &bull; Henry Horton XC: <a href="https://www.bikereg.com/hammerdrophh26" target="_blank" style="color:#C0146A;font-weight:700">bikereg.com/hammerdrophh26</a><br>
@@ -623,8 +628,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 
 <!-- CATEGORIES -->
 <div class="sh gld"><div class="sh-line"></div><div class="sh-text">Race Categories</div><div class="sh-line"></div></div>
-
-<!-- Podium callout -->
 <div class="podium-callout">
   <div class="pc-block mag">
     <div class="pc-block-label">20 Min Race &mdash; Short Track Podium</div>
@@ -635,7 +638,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
     <div class="pc-block-body">1st &bull; 2nd &bull; 3rd &mdash; Top Male &amp; Top Female overall finishers</div>
   </div>
 </div>
-
 <div class="cat-section">
   <div class="cat-tabs">
     <div class="cat-tab active f-all" onclick="filterCats('all',this)">All Categories</div>
@@ -643,8 +645,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
     <div class="cat-tab f-30" onclick="filterCats('30',this)">30 Min Race</div>
   </div>
   <div class="cat-all-grid" id="cat-grid">
-
-    <!-- 20 MIN GROUP HEADER -->
     <div class="cat-group-header" style="grid-column:1/-1" data-race="20">
       <div class="cat-group-dot" style="background:#C0146A"></div>
       <div class="cat-group-title">20-Minute Race</div>
@@ -660,8 +660,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
     <div class="cat-row" data-race="20"><div class="cat-name">Sport Women Masters CAT 2 (50–59)</div></div>
     <div class="cat-row" data-race="20"><div class="cat-name">Sport Men Veterans CAT 2 (60+)</div></div>
     <div class="cat-row" data-race="20"><div class="cat-name">Sport Women Veterans CAT 2 (60+)</div></div>
-
-    <!-- 30 MIN GROUP HEADER -->
     <div class="cat-group-header" style="grid-column:1/-1;margin-top:0.5rem" data-race="30">
       <div class="cat-group-dot" style="background:#C93A1A"></div>
       <div class="cat-group-title">30-Minute Race</div>
@@ -681,8 +679,6 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
     <div class="cat-row" data-race="30"><div class="cat-name">Sport Women CAT 2 (34 &amp; under)</div></div>
     <div class="cat-row" data-race="30"><div class="cat-name">Sport Men CAT 2 (35–49)</div></div>
     <div class="cat-row" data-race="30"><div class="cat-name">Sport Women CAT 2 (35–49)</div></div>
-
-    <!-- NOTE -->
     <div style="grid-column:1/-1;background:#f0efed;border:1px solid var(--border-light);border-radius:var(--radius-sm);padding:0.65rem 0.9rem;font-family:'Nunito Sans',sans-serif;font-size:11px;color:var(--muted);font-weight:600;line-height:1.5" data-race="note">
       &#x26A0;&#xFE0F; E-bikes are not permitted in Short Track races. All categories at Henry Horton and Barfield are automatically points-eligible.
     </div>
@@ -726,11 +722,11 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 <div class="prize-note">Cash payouts awarded to top 3 male and female finishers at every event. Podium awards presented as each race is completed. Final series prizes awarded at the Aug 26 celebration.</div>
 
 <!-- POINTS STRUCTURE -->
-<div class="sh mag" style="margin-top:1rem"><div class="sh-line"></div><div class="sh-text">Points Structure</div><div class="sh-line"></div></div>
+<div class="sh mag"><div class="sh-line"></div><div class="sh-text">Points Structure</div><div class="sh-line"></div></div>
 <div class="pts-grid" id="pts-grid"></div>
 
 <!-- CALCULATOR -->
-<div class="sh red" style="margin-top:0.5rem"><div class="sh-line"></div><div class="sh-text">Points Calculator</div><div class="sh-line"></div></div>
+<div class="sh red"><div class="sh-line"></div><div class="sh-text">Points Calculator</div><div class="sh-line"></div></div>
 <div class="calc-wrap">
   <div class="calc-title">What could you earn?</div>
   <div class="calc-sub">Select your race type, eligibility, and finish position to see your series points.</div>
@@ -786,11 +782,10 @@ body{font-family:'Nunito Sans',sans-serif;background:var(--bg);color:var(--text)
 
 </div>
 <script>
-// Points table - updated values from MOAB doc
-const baseHH = [20,18,16,14,12,10,8,6,4,2];
-const baseST = [10,9,8,7,6,5,4,3,2,1];
-const ord = ["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th"];
-const grid = document.getElementById('pts-grid');
+const baseHH=[20,18,16,14,12,10,8,6,4,2];
+const baseST=[10,9,8,7,6,5,4,3,2,1];
+const ord=["1st","2nd","3rd","4th","5th","6th","7th","8th","9th","10th"];
+const grid=document.getElementById('pts-grid');
 function cell(html,cls){const d=document.createElement('div');d.className='pc'+(cls?' '+cls:'');d.innerHTML=html;return d;}
 grid.appendChild(cell('<div class="pc-lbl">Position</div>','hd'));
 grid.appendChild(cell('<div class="pc-lbl">Short Track 1&times;</div>','hd'));
@@ -798,15 +793,14 @@ grid.appendChild(cell('<div class="pc-lbl">Barfield 1.5&times;</div>','hd'));
 grid.appendChild(cell('<div class="pc-lbl">Henry Horton 2&times;</div>','hd'));
 baseST.forEach((p,i)=>{
   const pc=i===0?'g':i===1?'s':i===2?'br':'';
-  const bf = p * 1.5;
-  const hh = baseHH[i];
+  const bf=p*1.5;
+  const hh=baseHH[i];
   grid.appendChild(cell(`<div class="pc-pos ${pc}">${ord[i]}</div>`));
   grid.appendChild(cell(`<div class="pc-val mag">${p}</div>`));
-  grid.appendChild(cell(`<div class="pc-val red">${bf % 1 === 0 ? bf : bf.toFixed(1)}</div>`));
+  grid.appendChild(cell(`<div class="pc-val red">${bf%1===0?bf:bf.toFixed(1)}</div>`));
   grid.appendChild(cell(`<div class="pc-val org">${hh}</div>`));
 });
 
-// Calculator
 const posSlider=document.getElementById('c-pos');
 const posLbl=document.getElementById('pos-lbl');
 const posBig=document.getElementById('pos-big');
@@ -820,10 +814,10 @@ function calc(){
   const pos=parseInt(posSlider.value);
   const raceVal=cRace.value;
   const npe=cElig.value==='npe';
-  let bp, mult;
-  if(raceVal==='2'){ bp=baseHH[pos-1]; mult='2×'; }
-  else if(raceVal==='1.5'){ bp=parseFloat((baseST[pos-1]*1.5).toFixed(1)); mult='1.5×'; }
-  else { bp=baseST[pos-1]; mult='1×'; }
+  let bp,mult;
+  if(raceVal==='2'){bp=baseHH[pos-1];mult='2×';}
+  else if(raceVal==='1.5'){bp=parseFloat((baseST[pos-1]*1.5).toFixed(1));mult='1.5×';}
+  else{bp=baseST[pos-1];mult='1×';}
   posLbl.textContent=ord[pos-1];
   posBig.textContent=ord[pos-1]+' Place';
   rBase.textContent=bp;
@@ -837,23 +831,14 @@ cRace.addEventListener('change',calc);
 cElig.addEventListener('change',calc);
 calc();
 
-// Category filter
-function filterCats(filter, el){
-  document.querySelectorAll('.cat-tab').forEach(t=>{
-    t.classList.remove('active');
-  });
+function filterCats(filter,el){
+  document.querySelectorAll('.cat-tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
-  const rows = document.querySelectorAll('#cat-grid [data-race]');
-  rows.forEach(r=>{
-    const race = r.getAttribute('data-race');
-    if(filter==='all' || race===filter || race==='note'){
-      r.style.display='';
-    } else {
-      r.style.display='none';
-    }
+  document.querySelectorAll('#cat-grid [data-race]').forEach(r=>{
+    const race=r.getAttribute('data-race');
+    r.style.display=(filter==='all'||race===filter||race==='note')?'':'none';
   });
 }
 </script>
 </body>
 </html>
-
