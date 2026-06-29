@@ -197,6 +197,15 @@
   .formframe{width:100%;height:1150px;border:1px solid var(--line);border-radius:14px;background:#fff;display:block}
   @media (max-width:820px){.calcell{min-height:64px;padding:4px}.caldate{font-size:11px}.calev{font-size:9px;padding:1px 3px}.formframe{height:1500px}}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.panel.active{animation:none}}
+  .cost{font-family:var(--disp);font-weight:700;font-size:34px;line-height:1;color:var(--navy);margin:2px 0 2px}
+  .cost small{font-family:var(--body);font-weight:500;font-size:13px;color:var(--muted)}
+  .costsub{color:var(--muted);font-size:13.5px;margin:8px 0 0;line-height:1.55}
+  .costwhere{display:inline-block;margin-top:11px;font-family:var(--disp);text-transform:uppercase;letter-spacing:.06em;font-size:11px;font-weight:600;color:var(--accent)}
+  body[data-team="indy"] .costwhere{color:var(--indy-gold-dk)}
+  .readycard{margin-top:20px;display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center}
+  .readycard .rc{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px}
+  .readycard .ck{width:22px;height:22px;border-radius:50%;background:var(--accent);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:13px;flex:0 0 auto}
+  body[data-team="indy"] .readycard .ck{color:#0a1a2c}
   :focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
 </style>
 </head>
@@ -316,7 +325,7 @@
       <h2 class="sec" style="margin-top:40px">Questions, answered</h2>
       <div class="faq">
         <details open><summary>Does my rider need a mountain bike?</summary><p>A working mountain bike with front suspension and a helmet is the baseline. We can point you to local shops and loaner options to get started. <span class="phtag">placeholder</span></p></details>
-        <details><summary>What does it cost?</summary><p>There are two parts: NICA / TN League fees (paid in PitZone) and WilCo team fees. See the Join tab for current amounts. <span class="phtag">placeholder</span></p></details>
+        <details><summary>What does it cost?</summary><p>Three parts per rider: NICA membership ($50 + $5 tech fee), Tennessee League membership ($100, plus $20–$30 per race), and team fees ($125). NICA and League fees are paid in PitZone; team fees go to @wilcocompmtb via Venmo by July 1. Full breakdown is on the Join tab.</p></details>
         <details><summary>How often are practices?</summary><p>Multiple practices per week at rotating trails around the region. The full calendar lives on the Races tab and syncs from the team app.</p></details>
         <details><summary>Do I need experience?</summary><p>No. Riders are grouped by ability and coached from wherever they're starting. Many join having never raced.</p></details>
       </div>
@@ -436,9 +445,43 @@
           </div>
         </div>
         <div class="step"><div class="n">2</div><h3>Register with NICA</h3><p>Sign in to PitZone and register with the NICA / Tennessee League.</p><a class="btn line sm" href="https://pitzone.nationalmtb.org/users/sign_in" target="_blank" rel="noopener">PitZone ↗</a></div>
-        <div class="step"><div class="n">3</div><h3>Pay your fees</h3><p>Pay both the NICA / TN League and WilCo team fees.</p><a class="btn line sm" href="https://www.venmo.com/u/wilcocompmtb" target="_blank" rel="noopener">WilCo Venmo ↗</a></div>
+        <div class="step"><div class="n">3</div><h3>Pay your fees</h3><p>Pay the NICA &amp; TN League fees in PitZone, plus team fees via Venmo to @wilcocompmtb by July 1. Fees must be paid before any participation.</p><a class="btn line sm" href="https://www.venmo.com/u/wilcocompmtb" target="_blank" rel="noopener">Team Venmo ↗</a></div>
       </div>
       <div class="note">Preseason kicks off <b>April 18 at Henry Horton.</b> Questions first? Email <a href="mailto:wilcocompmtb@gmail.com">wilcocompmtb@gmail.com</a> and a coach will follow up.</div>
+
+      <div style="margin-top:40px">
+        <div class="ey">What it costs</div>
+        <h2 class="sec">Season fees</h2>
+        <p class="lead">Three pieces make up a rider's season. NICA and Tennessee League fees are paid in PitZone; team fees are paid to the team via Venmo.</p>
+        <div class="grid3">
+          <div class="card">
+            <h3>NICA Membership</h3>
+            <div class="cost">$50 <small>/ student-athlete</small></div>
+            <p class="costsub">Plus a $5 technology fee per registrant. Registered coaches are $25.</p>
+            <span class="costwhere">Paid in PitZone</span>
+          </div>
+          <div class="card">
+            <h3>Tennessee League</h3>
+            <div class="cost">$100 <small>/ student-athlete</small></div>
+            <p class="costsub">Plus race fees: $20 per middle school race, $30 per high school race. Register all at once or race by race.</p>
+            <span class="costwhere">Paid in PitZone</span>
+          </div>
+          <div class="card">
+            <h3 id="teamFeeName">WilCo Team Fees</h3>
+            <div class="cost">$125 <small>/ student-athlete</small></div>
+            <p class="costsub">Due via Venmo to @wilcocompmtb by July 1, before any participation. Covers the team tent, supplies, recovery zone, end-of-year party, and coach appreciation.</p>
+            <span class="costwhere">Venmo @wilcocompmtb</span>
+          </div>
+        </div>
+        <div class="note">
+          <b>Ready to ride</b> when all three are complete:
+          <div class="readycard">
+            <span class="rc"><span class="ck">✓</span> NICA membership</span>
+            <span class="rc"><span class="ck">✓</span> Tennessee League membership</span>
+            <span class="rc"><span class="ck">✓</span> <span id="teamFeeName2">WilCo</span> team fees</span>
+          </div>
+        </div>
+      </div>
 
       <div class="formwrap">
         <div class="fhead">
@@ -745,6 +788,9 @@ function applyTeam(t){
   document.getElementById("heroName").textContent=T.name;
   document.getElementById("heroTag").innerHTML=T.tag+' <span class="phtag">placeholder copy</span>';
   document.getElementById("racesEy").textContent=(t==="wilco"?"WilCo Composite":"Independence")+" · NICA Tennessee";
+  const tfn=t==="wilco"?"WilCo":"Indy";
+  const fe1=document.getElementById("teamFeeName"); if(fe1) fe1.textContent=tfn+" Team Fees";
+  const fe2=document.getElementById("teamFeeName2"); if(fe2) fe2.textContent=tfn;
   // join tab: embedded form + open links
   const other = t==="wilco"?"indy":"wilco";
   document.getElementById("joinFrame").src = T.form;
